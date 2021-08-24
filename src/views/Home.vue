@@ -1,18 +1,38 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+        
+        <v-container >
+            <detailed-charts></detailed-charts>
+            <medicina-slides></medicina-slides>
+            <slide-card></slide-card>
+            <week-schedule></week-schedule>
+            <calendar></calendar>
+            <modal-window></modal-window>
+            <login></login>
+        </v-container>
+
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+import DetailedCharts from './UrlComponents/DetailedCharts.vue'
+import MedicinaSlides from './UrlComponents/MedicinaSlides.vue'
+import SlideCard from './UrlComponents/SlideCard.vue'
+import WeekSchedule from './UrlComponents/WeekSchedule.vue'
+import Calendar from './UrlComponents/Calendar.vue'
+import ModalWindow from './UrlComponents/ModalWindow.vue'
+import Login from './UrlComponents/Login.vue'
+    export default {
+        components: {
+            DetailedCharts,
+            MedicinaSlides,
+            SlideCard,
+            WeekSchedule,
+            Calendar,
+            ModalWindow,
+            Login
+        }
+    }
 </script>
+
+<style lang="scss" scoped>
+
+</style>
