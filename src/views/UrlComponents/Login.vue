@@ -68,7 +68,8 @@ import axios from "axios";
   watch: {
     UserInfo(newval) {
       if (this.UserInfo) {
-        axios.defaults.headers.common["Authorization"] = newval;
+        console.log("ff");
+        axios.defaults.headers.common["Bearer"] = newval;
         this.$router.push("/Start");
       }
     },

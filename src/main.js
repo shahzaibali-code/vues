@@ -15,7 +15,7 @@ Vue.use(VueAxios, axios);
 Vue.config.productionTip = false
 const token = localStorage.getItem('Gvtoken');
 if (token) {
-  axios.defaults.headers.common['Authorization'] = token;
+  axios.defaults.headers.common['Bearer'] = token;
 }
 
 new Vue({

@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Login from '../views/UrlComponents/Login.vue'
 import Detail from '../views/UrlComponents/DetailedCharts.vue'
-
+import axios from "axios";
 Vue.use(VueRouter)
 
 const routes = [
@@ -63,7 +63,7 @@ axios.interceptors.response.use(function (response) {
 
   const originalRequest = error.config;
 
-  if (error.response.status === 401 && !originalRequest._retry) {
+  if (error.response.status === 403 && !originalRequest._retry) {
       localStorage.setItem('LoginStatus', "LOGIN");
 
   }
