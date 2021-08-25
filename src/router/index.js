@@ -54,6 +54,21 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
-})
+});
+
+axios.interceptors.response.use(function (response) {
+    
+  return response;
+}, function (error) {
+
+  const originalRequest = error.config;
+
+  if (error.response.status === 401 && !originalRequest._retry) {
+      localStorage.setItem('LoginStatus', "LOGIN");
+
+  }
+
+  return Promise.reject(error);
+});
 
 export default router
