@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Login from '../views/UrlComponents/Login.vue'
+import Detail from '../views/UrlComponents/DetailedCharts.vue'
 
 Vue.use(VueRouter)
 
@@ -13,6 +15,22 @@ const routes = [
       layout: "default"
     },
     component: Home
+  },
+  {
+    path: '/Login',
+    name: 'Login',
+    meta: {
+      layout: "default"
+    },
+    component: Login
+  },
+  {
+    path: '/Start',
+    name: 'Start',
+    meta: {
+      layout: "default"
+    },
+    component: Detail
   },
   {
     path: '/Home',

@@ -2,17 +2,17 @@
     <div class="mt-15">
  <form>
     <v-text-field
-      v-model="name"
-      label="Email"
+      v-model="username"
+      label="username"
       prepend-inner-icon="mdi-account"
 
 
       required
     ></v-text-field>
     <v-text-field
-      v-model="email"
+      v-model="password"
       prepend-inner-icon="mdi-lock"
-      label="Senha"
+      label="password"
       required
     ></v-text-field>
 
@@ -20,6 +20,7 @@
     <v-btn
       class="ma-2 pa-5 btn white--text"
       color="newOne"
+      v-on:click="loginTriger"
       rounded
       dark
       block
@@ -31,13 +32,47 @@
 </template>
 
 <script>
+import axios from "axios";
     export default {
-        data(){
-            return {
-                name: '',
-                email: ''
-            }
-        }
+        data() {
+    return {
+      username: "",
+      password: "",
+    };
+  },
+  methods: {
+    loginTriger() {
+      this.$store.dispatch("UserLogin", {
+        username: this.username,
+        password: this.password,
+      });
+    },
+  },
+  computed: {
+    isValid() {
+      if (this.username.length < 2) {
+        return false;
+      }
+      if (this.password.length < 3) {
+        return false;
+      }
+      return true;
+    },
+    UserInfo() {
+      return this.$store.state.Token;
+    },
+    Loading() {
+      return this.$store.state.Loading;
+    },
+  },
+  watch: {
+    UserInfo(newval) {
+      if (this.UserInfo) {
+        axios.defaults.headers.common["Authorization"] = newval;
+        this.$router.push("/Start");
+      }
+    },
+  },
     }
 </script>
 
