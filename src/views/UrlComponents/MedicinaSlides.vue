@@ -2,13 +2,13 @@
 <div class="mt-15">
 
   <div>
-      <p class="text-h3 head ma-0"> Medicina Tradicional</p>
-      <p class="text-subtitle">A sua qualidade de vida é o seu auto cuidado</p>
+      <p class="text-h4 head ma-0"> Medicina Tradicional</p>
+      <p class="text-h8 text-subtitle">A sua qualidade de vida é o seu auto cuidado</p>
   </div>
 
   <!-- slider -->
     <v-slide-group
-      class="pa-4"
+      
       active-class="success"
       show-arrows
     >
@@ -20,9 +20,9 @@
       >
       <v-card
         :color="active ? undefined : 'white'"
-        class="ma-4"
-        height="440"
-        width="200"
+        class="ma-1"
+        height="400"
+        width="160"
         @click="toggle"
         rounded
 
@@ -43,11 +43,11 @@
         <v-card-text class="card-text">
           <p class="text-caption ma-0 calor">Porque?</p>
           <p class="text-body-2 ma-0">
-            Você pensa muito, e isto é bom, mas um profissional pode te ajudar ser mais feliz.
+            Você pensa muito, e isto é bom, mas um profissional pode te ajudar ser.
           </p>
           <p class="text-caption ma-0 calor">Porque?</p>
           <p class="text-body-2">
-            Você pensa muito, e isto é bom, mas um profissional pode te ajudar ser mais feliz.
+            Você pensa muito, e isto é bom, mas um profissional.
           </p>
         </v-card-text>
 
@@ -79,7 +79,7 @@
 
     </v-slide-group>
 
-      <p class="text-h4 text-center head">Clique na recomendação e inicie a sua vida holística</p>
+      <p class="text-h9 text-center head">Clique na recomendação e inicie a sua vida holística</p>
 
   </div>
 </template>
@@ -90,7 +90,12 @@
     }
 </script>
 
-<style lang="scss" scoped>
+<style  >
+.v-slide-group__next, 
+.v-slide-group__prev {
+
+    min-width: 0px;
+}
 .head{
   color: #2592A1;
 }

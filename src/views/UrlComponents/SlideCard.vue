@@ -2,7 +2,7 @@
     <v-card
     :loading="loading"
     class="mx-auto my-12"
-    max-width="80%"
+    max-width="100%"
             rounded
 
   >

@@ -1,6 +1,7 @@
 <template>
     <div class="mt-15">
- <form>
+      
+ <form min-width="340" max-width="800"  >
     <v-text-field
       v-model="username"
       label="username"
@@ -28,6 +29,7 @@
       ENTRAR
     </v-btn>
   </form>
+      </v-card>
     </div>
 </template>
 

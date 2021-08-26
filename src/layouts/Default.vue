@@ -1,5 +1,6 @@
 <template>
-  <v-app class="root">
+  <v-app class="root" min-width="340" max-width="800">
+    
     <nav-bar></nav-bar>
     <v-row>
       <v-col cols="12"  sm="12" md="12">
@@ -13,6 +14,7 @@
       <v-icon dark> mdi-plus </v-icon>
     </v-btn>
     <bottom-bar></bottom-bar>
+    
   </v-app>
 </template>
 
@@ -48,6 +50,6 @@ export default {
 .stick {
   position: fixed;
   bottom: 80px;
-  right: 0;
+  right:15px;
 }
 </style>

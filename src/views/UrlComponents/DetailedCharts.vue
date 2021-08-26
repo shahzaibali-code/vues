@@ -1,7 +1,8 @@
 <template>
   <div>
+    
     <v-card min-height="360" max-height="800" elevation="2" rounded class="mx-auto">
-      <v-card-title>
+       <v-card-title>
         <v-avatar size="62" class="mr-5">
           <v-img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John">
             <v-img
@@ -30,7 +31,7 @@
           </v-col>
         </v-row>
       </v-card-subtitle>
-      <v-card-text class="ma-15"> Radar Chart </v-card-text>
+      <v-card-text class="my-15"> Radar Chart </v-card-text>
       <v-card-actions class="card-bottom">
         <v-img
           src="../../assets/all-assets/icn_activity_inactive.svg"
@@ -41,8 +42,7 @@
         <span class="text-caption"> CONTINUAR TESTES</span>
       </v-card-actions>
     </v-card>
-
-    <v-card min-height="360" max-height="800" elevation="2" class="mt-10">
+     <v-card min-height="360" max-height="800" elevation="2" class="mt-10">
       <v-card-title>
         <span>
           <h5 class="head ma-0 pa-0 text-h5">MEU HISTORICO</h5>
@@ -60,7 +60,7 @@
           </v-col>
         </v-row>
       </v-card-subtitle>
-      <v-card-text class="ma-15"> Line Chart </v-card-text>
+      <v-card-text class="my-15"> Line Chart </v-card-text>
       <v-card-actions class="card-bottom">
         <v-img
           src="../../assets/all-assets/ic_speaker_notes_24px.svg"
@@ -71,6 +71,7 @@
         <span class="text-caption"> NÃO ESTÁ SE SAINDO BEM?</span>
       </v-card-actions>
     </v-card>
+    
   </div>
 </template>
 

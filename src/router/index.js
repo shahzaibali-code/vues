@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Login from '../views/UrlComponents/Login.vue'
-import Detail from '../views/UrlComponents/DetailedCharts.vue'
+import Start from '../views/Start.vue';
 import axios from "axios";
 Vue.use(VueRouter)
 
@@ -30,7 +30,7 @@ const routes = [
     meta: {
       layout: "default"
     },
-    component: Detail
+    component: Start
   },
   {
     path: '/Home',
