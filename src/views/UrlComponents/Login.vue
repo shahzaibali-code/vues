@@ -1,7 +1,7 @@
 <template>
-    <div class="mt-15">
-      
- <form min-width="340" max-width="800"  >
+    <div class="mt-15"  >
+    <div  class="d-flex justify-center ">
+ <v-form  >
     <v-text-field
       v-model="username"
       label="username"
@@ -22,14 +22,15 @@
       class="ma-2 pa-5 btn white--text"
       color="newOne"
       v-on:click="loginTriger"
+      
       rounded
       dark
       block
     >
       ENTRAR
     </v-btn>
-  </form>
-      </v-card>
+  </v-form>
+    </div>
     </div>
 </template>
 
@@ -80,6 +81,7 @@ import axios from "axios";
 </script>
 
 <style lang="scss" scoped>
+
 .btn {
 box-shadow: 0px 3px 6px #00000029;
 border-radius: 26px;
